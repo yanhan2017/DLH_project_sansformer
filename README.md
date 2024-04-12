@@ -9,9 +9,9 @@ Libraries needed:
 - einops
 - torch_optimizer
 
+To preprocess data:
 First run preprocess.py, change MIMIC_PATH to your own path to mimic dataset, this will generate some files in your MIMIC_PATH
 
 To run the main code:
 - Edit PATHS in configs/config_axial_sansformer.yml
 - python run_mimic_experiment.py --cfg "path-to-config-yaml"
-- Still cannot run successfully, because preprocess.py didn't generate vectorizers.

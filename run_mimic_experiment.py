@@ -30,14 +30,14 @@ def run_experiment(cfg, train_dataloader, val_dataloader, test_dataloaders):
         cfg, model, train_dataloader, val_dataloader, test_dataloaders
     )
     # fit on training data
-    trainer.fit()
+    # trainer.fit()
     # predict on valid and test data
     test_metrics_l = trainer.predict()
 
     common.log_test_results_to_csv(
         cfg,
         os.path.join(
-            "/l/Work/aalto/sansformers/experiments/experiment_logs/",
+            cfg.PATHS.OUT_DIR,
             cfg.PATHS.RESULTS_LOG_FILENAME,
         ),
         test_metrics_l,

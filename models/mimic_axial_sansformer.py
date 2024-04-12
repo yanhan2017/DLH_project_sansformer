@@ -28,7 +28,7 @@ class MimicAxialSansformerModel(nn.Module):
         self.dropout_p = self.cfg.MODEL.DROPOUT_P
 
         self.pummel_embed = MIMICVisitwiseAxialEmbedding(cfg)
-        self.ethn_embed = nn.Embedding(8, 4)
+        self.ethn_embed = nn.Embedding(33, 4)
 
         self.sansformer = nn.ModuleList(
             [

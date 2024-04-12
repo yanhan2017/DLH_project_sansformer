@@ -23,7 +23,7 @@ class MIMICDataset(torch.utils.data.Dataset):
 
         self.icd = df.loc[:, "icd_all"]
         self.proc = df.loc[:, "proc_all"]
-        self.drg = df.loc[:, "drug_all"]
+        self.drg = df.loc[:, "drg_all"]
         self.service = df.loc[:, "service_all"]
         self.admtype = df.loc[:, "admission_type"]
         self.insur = df.loc[:, "insurance"]

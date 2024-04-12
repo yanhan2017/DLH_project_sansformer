@@ -244,7 +244,12 @@ import sys
 
 sys.path.append("../src/")
 from dataset.vectorizer import EHRCountVectorizer
-
+import pickle
+vectorizer = EHRCountVectorizer.from_dataframe_cols(mimic_df, ['icd_all', 'proc_all', 'drg_all', 'service_all',
+                                                               'admission_type', 'insurance', 'marital_status'])
+vec_dict = {"mimic_all": vectorizer}
+with open(os.path.join(MIMIC_PATH, 'vectorizer.pickle'), 'wb') as handle:
+    pickle.dump(vec_dict, handle)
 
 def apply_prefix(row, prefix):
     visits = row.split(";")

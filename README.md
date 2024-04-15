@@ -1,6 +1,7 @@
 # Sansformer
 ### Original paper: https://arxiv.org/abs/2108.13672
 ### Original Github link: https://github.com/ykumards/sansformers
+### Google Model Link: https://drive.google.com/file/d/1_uv_v7DWI6CR8hon1q7F_Q_fHDyRkfG0/view?usp=sharing
 
 #### To run code:
 Libraries needed:

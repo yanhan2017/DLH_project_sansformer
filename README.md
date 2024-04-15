@@ -4,15 +4,6 @@
 ### Google Model Link: https://drive.google.com/file/d/1_uv_v7DWI6CR8hon1q7F_Q_fHDyRkfG0/view?usp=sharing
 
 #### To run code:
-Libraries needed:
-- prettytable
-- yacs
-- einops
-- torch_optimizer
-
-To preprocess data:
-First run preprocess.py, change MIMIC_PATH to your own path to mimic dataset, this will generate some files in your MIMIC_PATH
-
-To run the main code:
-- Edit PATHS in configs/config_axial_sansformer.yml
-- python run_mimic_experiment.py --cfg "path-to-config-yaml"
+- Clone the repo and use it as root path. See TO DO under the Methodology section in the .ipynb file.
+- Our saved model is too large to upload to GitHub, so plz download from the link and use its path in config. See TODO under the Data section in the .ipynb file.
+- Saved model link is 'https://drive.google.com/file/d/1_uv_v7DWI6CR8hon1q7F_Q_fHDyRkfG0/view?usp=sharing.'

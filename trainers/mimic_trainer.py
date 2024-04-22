@@ -236,8 +236,8 @@ class Trainer_MIMIC(BaseTrainer):
 
     def predict(self):
         print("=" * 100)
-        best_epoch = self.load_best_score_checkpoint()
-        print(f"loaded model from epoch: {best_epoch}")
+        # best_epoch = self.load_best_score_checkpoint()
+        # print(f"loaded model from epoch: {best_epoch}")
 
         _ = self.run_epoch("validation", self.val_dataloader)
 

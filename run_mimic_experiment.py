@@ -30,7 +30,7 @@ def run_experiment(cfg, train_dataloader, val_dataloader, test_dataloaders):
         cfg, model, train_dataloader, val_dataloader, test_dataloaders
     )
     # fit on training data
-    # trainer.fit()
+    trainer.fit()
     # predict on valid and test data
     test_metrics_l = trainer.predict()
 

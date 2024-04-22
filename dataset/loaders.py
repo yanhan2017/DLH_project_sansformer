@@ -186,6 +186,6 @@ def get_mimic_dataloaders(cfg):
         pin_memory=True,
     )
 
-    test_dataloaders = [test_dataloader, test_dataloader2]
+    test_dataloaders = [test_dataloader]
 
     return train_dataloader, val_dataloader, test_dataloaders

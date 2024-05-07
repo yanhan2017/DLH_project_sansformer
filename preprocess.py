@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 from tqdm.auto import tqdm
 
-MIMIC_PATH = "/Users/hanyan/Documents/UIUC/Spring24/CS598 DLH/project/mimic-iv-clinical-database-demo-2.2"
+MIMIC_PATH = "/Users/hanyan/Documents/UIUC/Spring24/CS598 DLH/project/mimic-iv-2.2"
 HOSP_PATH = os.path.join(MIMIC_PATH, "hosp")
 CORE_PATH = os.path.join(MIMIC_PATH, "hosp")
 
@@ -245,11 +245,6 @@ import sys
 sys.path.append("../src/")
 from dataset.vectorizer import EHRCountVectorizer
 import pickle
-vectorizer = EHRCountVectorizer.from_dataframe_cols(mimic_df, ['icd_all', 'proc_all', 'drg_all', 'service_all',
-                                                               'admission_type', 'insurance', 'marital_status'])
-vec_dict = {"mimic_all": vectorizer}
-with open(os.path.join(MIMIC_PATH, 'vectorizer.pickle'), 'wb') as handle:
-    pickle.dump(vec_dict, handle)
 
 def apply_prefix(row, prefix):
     visits = row.split(";")
@@ -293,3 +288,9 @@ train.reset_index(drop=True).to_feather(
 test.reset_index(drop=True).to_feather(
     os.path.join(MIMIC_PATH, f"mimic_test_rem{TARGET_OFFSET}.feather")
 )
+
+vectorizer = EHRCountVectorizer.from_dataframe_cols(mimic_df, ['icd_all', 'proc_all', 'drg_all', 'service_all',
+                                                               'admission_type', 'insurance', 'marital_status'])
+vec_dict = {"mimic_all": vectorizer}
+with open(os.path.join(MIMIC_PATH, 'vectorizer.pickle'), 'wb') as handle:
+    pickle.dump(vec_dict, handle)

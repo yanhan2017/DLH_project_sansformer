@@ -1,0 +1,2 @@
+loss,bin_loss,los_loss,auc_bin,spearman_los,base_lr,lr_policy,batch_size,optim_momentum,max_seq_length,embed_size,max_epochs,exp_dir,exp_name,test_id
+0.5909209175019705,0.5909209175019705,0.0,0.7624486239607902,nan,0.00059117,1cycle,8,0.9,200,128,20,/content/drive/MyDrive/Colab_Notebooks/DLH/src/experiments/axialSANS_data_3_dropout_0.1/at_2024_05_06_18_32_09,axialSANS_data_3_dropout_0.1,0

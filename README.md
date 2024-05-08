@@ -5,4 +5,7 @@
 
 
 #### To run code:
-- Clone the repo and use it as root path. See TODOs in the .ipynb file.
+- Download GitHub repo and use as root path
+- Download MIMIC dataset and run preprocess.py
+- Follow TODOs in Team_39_Final_Report.ipynb to train and test model.
+
